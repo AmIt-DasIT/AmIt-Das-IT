@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Contact() {
 
 const handleCallClick = () => {
-    window.location.href = "tel:+919876543210";
+    window.location.href = "tel:+917679480267";
   };
 
   return (
@@ -59,11 +59,11 @@ const handleCallClick = () => {
         </form>
 <Card className="w-full max-w-md mx-auto p-6 rounded-2xl shadow-lg">
       <CardContent className="flex flex-col items-center gap-6">
-        <Phone className="w-12 h-12 text-primary" />
         <Button
           onClick={handleCallClick}
           className="text-lg font-semibold"
         >
+<Phone className=" text-primary" />
           Call Me
         </Button>
       </CardContent>
