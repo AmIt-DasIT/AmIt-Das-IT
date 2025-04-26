@@ -58,7 +58,7 @@ const handleCallClick = () => {
         </form>
         <Button
           onClick={handleCallClick}
-          className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+          className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
         >
 <Phone className="" />
           Call Me
