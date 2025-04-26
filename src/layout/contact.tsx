@@ -57,17 +57,13 @@ const handleCallClick = () => {
             <Mail className="mr-2" /> Send Message
           </Button>
         </form>
-<Card className="w-full max-w-md mx-auto p-6 rounded-2xl shadow-lg">
-      <CardContent className="flex flex-col items-center gap-6">
         <Button
           onClick={handleCallClick}
-          className="text-lg font-semibold"
+          className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
         >
-<Phone className=" text-primary" />
+<Phone className="" />
           Call Me
         </Button>
-      </CardContent>
-    </Card>
       </motion.div>
     </motion.section>
   );
