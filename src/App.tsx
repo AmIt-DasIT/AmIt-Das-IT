@@ -24,7 +24,6 @@ const App: React.FC = () => {
         transition={{ type: "spring", stiffness: 260, damping: 15 }}
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Portfolio</h1>
           <div className="flex gap-4 items-center">
             <a href="#about-me">About Me</a>
             <a href="#skills">Skills</a>
