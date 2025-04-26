@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/anim/animation";
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Contact() {
   return (
@@ -51,6 +52,17 @@ export default function Contact() {
             <Mail className="mr-2" /> Send Message
           </Button>
         </form>
+<Card className="w-full max-w-md mx-auto p-6 rounded-2xl shadow-lg">
+      <CardContent className="flex flex-col items-center gap-6">
+        <Phone className="w-12 h-12 text-primary" />
+        <Button
+          onClick={handleCallClick}
+          className="text-lg font-semibold"
+        >
+          Call Mobile Number
+        </Button>
+      </CardContent>
+    </Card>
       </motion.div>
     </motion.section>
   );
