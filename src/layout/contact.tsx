@@ -5,6 +5,11 @@ import { Mail, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function Contact() {
+
+const handleCallClick = () => {
+    window.location.href = "tel:+919876543210";
+  };
+
   return (
     <motion.section
       className="container mx-auto px-4 py-20"
