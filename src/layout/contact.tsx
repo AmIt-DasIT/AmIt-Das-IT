@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/anim/animation";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
 export default function Contact() {
 
