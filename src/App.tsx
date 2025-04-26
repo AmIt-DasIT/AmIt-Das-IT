@@ -25,7 +25,6 @@ const App: React.FC = () => {
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex gap-4 items-center">
-            <a href="#about-me">About Me</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
