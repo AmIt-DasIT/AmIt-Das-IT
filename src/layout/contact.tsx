@@ -59,7 +59,7 @@ export default function Contact() {
           onClick={handleCallClick}
           className="text-lg font-semibold"
         >
-          Call Mobile Number
+          Call Me
         </Button>
       </CardContent>
     </Card>
