@@ -19,8 +19,9 @@ export default function AboutMe() {
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
       />
 
-      <motion.h1 variants={itemVariants} className="text-5xl font-bold mb-4">
-        Amit Das
+      <motion.h1 variants={itemVariants} className="mb-4">
+        <span className="text-xl pr-2">Hi there, I&apos;m</span>
+        <span className="text-5xl font-extrabold">Amit Das</span>
       </motion.h1>
       <motion.p
         variants={itemVariants}
@@ -32,14 +33,16 @@ export default function AboutMe() {
         variants={itemVariants}
         className="text-xl mb-6 text-muted-foreground max-w-3xl mx-auto"
       >
-        I am a highly motivated and dedicated web and mobile developer with
-        hands-on experience in building dynamic, user-centric applications using
-        <b className="text-primary"> React</b>,{" "}
-        <b className="text-primary">React Native</b>,{" "}
-        <b className="text-primary">Next.js</b>, and{" "}
-        <b className="text-primary">Express.js</b>. My development journey is
-        fueled by a strong passion for crafting scalable, efficient, and
-        intuitive solutions that create meaningful user experiences.
+        I love coding — it’s not just work, it’s what I enjoy. I have fun
+        building smooth, responsive UIs with{" "}
+        <b className="text-primary">React</b> and{" "}
+        <b className="text-primary">Tailwind CSS</b>, and I’m always up for
+        creating something clean, fast, and user-friendly. I enjoy collaborating
+        with teams, sharing ideas, supporting others, and constantly learning.
+        Whether it’s frontend finesse or backend logic with{" "}
+        <b className="text-primary">Next js</b>,{" "}
+        <b className="text-primary">Node.js</b> and{" "}
+        <b className="text-primary">Remix</b>, I’m all in.
       </motion.p>
       <motion.div variants={itemVariants} className="flex justify-center gap-4">
         <Button variant="outline" className="border-border">

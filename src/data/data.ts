@@ -96,6 +96,11 @@ export const experience = [
 ];
 
 export const certifications = [
-  { name: "AWS Certified Developer", issuer: "Amazon", year: "2023" },
-  { name: "Google UX Design", issuer: "Google", year: "2022" },
+  {
+    name: "React JS Certificate",
+    issuer: "HackerRank",
+    year: "2025",
+    link: "/frontend_developer_react certificate.pdf",
+  },
+  // { name: "Google UX Design", issuer: "Google", year: "2022", link: "" },
 ];

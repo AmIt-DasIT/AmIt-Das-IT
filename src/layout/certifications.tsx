@@ -2,6 +2,14 @@ import { motion } from "framer-motion";
 import { certifications } from "@/data/data";
 import { itemVariants, containerVariants } from "@/anim/animation";
 import { Award } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function Certifications() {
   return (
@@ -20,18 +28,34 @@ export default function Certifications() {
         {certifications.map((cert, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-card rounded-lg shadow-md flex items-center"
+            className="p-6 bg-card rounded-lg shadow-md flex items-center relative"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.2 }}
             whileHover={{ scale: 1.02 }}
           >
             <Award className="mr-4" />
-            <div>
+            <div className="">
               <h3 className="text-xl font-semibold">{cert.name}</h3>
               <p className="text-muted-foreground">
                 {cert.issuer} | {cert.year}
               </p>
+              <Dialog>
+                <DialogTrigger className="absolute top-4 right-4 cursor-pointer hover:underline text-sm text-chart-2 font-extrabold">
+                  View
+                </DialogTrigger>
+                <DialogContent className="!max-w-3xl">
+                  <DialogHeader>
+                    <DialogTitle>{cert.name}</DialogTitle>
+                    <DialogDescription>
+                      <iframe
+                        src={cert.link}
+                        className="w-full min-h-[60vh]"
+                      ></iframe>
+                    </DialogDescription>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
             </div>
           </motion.div>
         ))}

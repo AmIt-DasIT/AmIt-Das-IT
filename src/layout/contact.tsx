@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/anim/animation";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 export default function Contact() {
   const handleCallClick = () => {
@@ -47,13 +48,19 @@ export default function Contact() {
             </label>
             <textarea className="w-full p-2 rounded-md bg-background border border-input min-h-[100px]"></textarea>
           </div>
-          <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button variant={"outline"} className="w-full">
             <Mail className="mr-2" /> Send Message
           </Button>
         </form>
+        <div className="flex gap-2 my-5 items-center">
+          <Separator className="flex-1" />
+          <span className="font-semibold italic">OR</span>
+          <Separator className="flex-1" />
+        </div>
         <Button
           onClick={handleCallClick}
-          className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
+          variant={"outline"}
+          className="w-full mt-2"
         >
           <Phone className="" />
           Call Me
