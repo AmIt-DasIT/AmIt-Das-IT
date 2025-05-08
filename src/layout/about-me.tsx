@@ -11,13 +11,14 @@ export default function AboutMe() {
       id="about-me"
     >
       <motion.img
-        src="https://github.com/shadcn.png"
+        src="/avatar.jpg"
         alt="Profile"
-        className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-border shadow-lg"
+        className="w-36 h-36 mx-auto rounded-full mb-6 border-4 border-border shadow-lg object-contain"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
       />
+
       <motion.h1 variants={itemVariants} className="text-5xl font-bold mb-4">
         Amit Das
       </motion.h1>
@@ -51,7 +52,13 @@ export default function AboutMe() {
           </a>
         </Button>
         <Button variant="outline" className="border-border">
-          <Linkedin className="mr-2" /> LinkedIn
+          <a
+            href="https://www.linkedin.com/in/amitdasit/"
+            target="_blank"
+            className="flex items-center"
+          >
+            <Linkedin className="mr-2" /> LinkedIn
+          </a>
         </Button>
         <Button variant="outline" className="border-border">
           <a
@@ -65,10 +72,10 @@ export default function AboutMe() {
           </a>
         </Button>
       </motion.div>
-      <a href="#skills">
+      <a href="#skills" className="hidden sm:flex">
         <CircleArrowDown
           className="animate-bounce text-muted-foreground absolute bottom-14 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          size={42}
+          size={30}
         />
       </a>
     </motion.section>

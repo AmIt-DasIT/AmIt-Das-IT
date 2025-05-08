@@ -5,7 +5,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 interface Project {
@@ -13,31 +12,28 @@ interface Project {
   title: string;
   description: string;
   github_link: string;
+  image_url: string;
 }
 
 export const ProjectCard: React.FC<{ project: Project; index: number }> = ({
   project,
-  index,
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.2, duration: 0.5 }}
-      whileHover={{ scale: 1.03 }}
-    >
+    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}>
       <Card>
         <CardHeader>
-          <CardTitle>{project.title}</CardTitle>
+          <CardTitle className="font-extrabold">{project.title}</CardTitle>
           <CardDescription>{project.description}</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="w-full h-40 bg-neutral-200 dark:bg-stone-900 rounded-md mb-4"></div>
-          <Button>
-            <a href={project.github_link} target="_blank">
-              View Demo
-            </a>
-          </Button>
+          <img
+            src={project.image_url}
+            className="w-full h-40 bg-neutral-200 dark:bg-stone-900 rounded-md mb-4"
+            alt=""
+          />
+          <a href={project.github_link} className="font-bold underline" target="_blank">
+            View Demo
+          </a>
         </CardContent>
       </Card>
     </motion.div>

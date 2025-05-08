@@ -4,17 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
 
 export default function Contact() {
-
-const handleCallClick = () => {
+  const handleCallClick = () => {
     window.location.href = "tel:+917679480267";
   };
 
   return (
-    <motion.section
-      className="container mx-auto px-4 py-20"
-      variants={containerVariants}
-      id="contact"
-    >
+    <motion.section variants={containerVariants} className="pt-20" id="contact">
       <motion.h2
         variants={itemVariants}
         className="text-3xl font-bold text-center mb-12"
@@ -60,7 +55,7 @@ const handleCallClick = () => {
           onClick={handleCallClick}
           className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
         >
-<Phone className="" />
+          <Phone className="" />
           Call Me
         </Button>
       </motion.div>

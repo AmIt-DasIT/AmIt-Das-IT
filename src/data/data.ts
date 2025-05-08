@@ -1,21 +1,59 @@
 export const projects = [
-  // {
-  //   id: 1,
-  //   title: "CAAQMS",
-  //   description: "https://diag.caaqms.wbpcb.wtlprojects.com/",
-  //   github_link: "https://diag.caaqms.wbpcb.wtlprojects.com/",
-  // },
-  // {
-  //   id: 2,
-  //   title: "WBPHED - PWMS",
-  //   description: "https://pwms.wbphed.wtlprojects.com/",
-  //   github_link: "https://pwms.wbphed.wtlprojects.com/",
-  // },
+  {
+    id: 1,
+    title: "SLM Data Visualizer",
+    description: "http://monster-dev-test.distronix.in:3102/",
+    github_link: "http://monster-dev-test.distronix.in:3102/",
+    image_url: "/git-tree.png",
+  },
+  {
+    id: 2,
+    title: "CAAQMS",
+    description: "https://diag.caaqms.wbpcb.wtlprojects.com/",
+    github_link: "https://diag.caaqms.wbpcb.wtlprojects.com/",
+    image_url: "/git-tree.png",
+  },
   {
     id: 3,
+    title: "WBPHED - PWMS",
+    description: "https://pwms.wbphed.wtlprojects.com/",
+    github_link: "https://pwms.wbphed.wtlprojects.com/",
+    image_url: "/git-tree.png",
+  },
+  {
+    id: 4,
     title: "Gitlab Commit Tracker",
     description: "https://git-tree-viewer.vercel.app/",
     github_link: "https://git-tree-viewer.vercel.app/",
+    image_url: "/git-tree.png",
+  },
+  {
+    id: 5,
+    title: "HTML Code Editor",
+    description: "https://code-editor-next.vercel.app/login",
+    github_link: "https://code-editor-next.vercel.app/login",
+    image_url: "/git-tree.png",
+  },
+  {
+    id: 6,
+    title: "Local Music App",
+    description: "https://local-music-app.vercel.app/",
+    github_link: "https://local-music-app.vercel.app/",
+    image_url: "/git-tree.png",
+  },
+  {
+    id: 7,
+    title: "Free React Components",
+    description: "https://web-prep.vercel.app/",
+    github_link: "https://web-prep.vercel.app/",
+    image_url: "/git-tree.png",
+  },
+  {
+    id: 8,
+    title: "EyeStop",
+    description: "https://www.eyestop.in/",
+    github_link: "https://www.eyestop.in/",
+    image_url: "/git-tree.png",
   },
 ];
 
