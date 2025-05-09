@@ -39,7 +39,7 @@ export const projects = [
     title: "Local Music App",
     description: "https://local-music-app.vercel.app/",
     github_link: "https://local-music-app.vercel.app/",
-    image_url: "/git-tree.png",
+    image_url: "/music.png",
   },
   {
     id: 7,

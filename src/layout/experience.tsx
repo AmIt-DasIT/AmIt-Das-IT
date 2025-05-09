@@ -17,7 +17,7 @@ export default function Experience() {
           {experience.map((exp, index) => (
             <motion.div
               key={index}
-              className="p-6 bg-card rounded-lg shadow-md"
+              className="p-6 bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border rounded-lg shadow-md"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.2 }}

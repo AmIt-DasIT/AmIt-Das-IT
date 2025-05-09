@@ -39,7 +39,7 @@ export default function Contact() {
         Get in Touch
       </motion.h2>
       <motion.div
-        className="max-w-md mx-auto p-6 bg-card rounded-lg shadow-lg"
+        className="max-w-md mx-auto p-6 bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border rounded-lg shadow-lg"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", stiffness: 100 }}
