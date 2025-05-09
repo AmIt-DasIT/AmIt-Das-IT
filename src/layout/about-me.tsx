@@ -13,7 +13,7 @@ export default function AboutMe() {
       <motion.img
         src="/avatar.jpg"
         alt="Profile"
-        className="w-36 h-36 mx-auto rounded-full mb-6 border-4 border-border shadow-lg object-contain"
+        className="w-40 h-40 sm:w-52 sm:h-52 mx-auto rounded-full mb-6 border-4 border-border shadow-lg object-contain"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
@@ -44,7 +44,10 @@ export default function AboutMe() {
         <b className="text-primary">Node.js</b> and{" "}
         <b className="text-primary">Remix</b>, I’m all in.
       </motion.p>
-      <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4">
+      <motion.div
+        variants={itemVariants}
+        className="flex flex-wrap justify-center gap-4"
+      >
         <Button variant="outline" className="border-border">
           <a
             href="https://github.com/AmIt-DasIT"
@@ -61,6 +64,16 @@ export default function AboutMe() {
             className="flex items-center"
           >
             <Linkedin className="mr-2" /> LinkedIn
+          </a>
+        </Button>
+        <Button variant="outline" className="border-border">
+          <a
+            href="https://uiverse.io/profile/AmIt-DasIT"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <img src="/uiverse.webp" className="w-[60px] pt-1.5" alt="uiverse" />
           </a>
         </Button>
         <Button variant="outline" className="border-border">

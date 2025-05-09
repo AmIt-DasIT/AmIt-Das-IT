@@ -9,6 +9,7 @@ import Certifications from "./layout/certifications";
 import AboutMe from "./layout/about-me";
 import Contact from "./layout/contact";
 import { Sidebar } from "./components/sidebar";
+import Gallery from "./layout/gallery";
 
 const App: React.FC = () => {
   return (
@@ -58,6 +59,9 @@ const App: React.FC = () => {
 
         {/* Certifications */}
         <Certifications />
+
+        {/* Gallery */}
+        {/* <Gallery /> */}
 
         {/* Contact */}
         <Contact />
