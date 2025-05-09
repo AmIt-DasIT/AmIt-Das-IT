@@ -75,7 +75,7 @@ export default function Contact() {
             ></textarea>
           </div>
           <Button variant={"default"} className="w-full">
-            <Mail className="mr-2" /> Send Message
+            <Mail /> Send Message
           </Button>
         </form>
         <div className="flex gap-2 my-5 items-center">
@@ -88,7 +88,7 @@ export default function Contact() {
           variant={"outline"}
           className="w-full mt-2"
         >
-          <Phone className="" />
+          <Phone />
           Call Me
         </Button>
       </motion.div>

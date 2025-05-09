@@ -20,7 +20,7 @@ export default function AboutMe() {
       />
 
       <motion.h1 variants={itemVariants} className="mb-4">
-        <span className="text-xl pr-2">Hi there, I&apos;m</span>
+        <span className="text-xl pr-2">Hi, I&apos;m</span>
         <span className="text-5xl font-extrabold">Amit Das</span>
       </motion.h1>
       <motion.p

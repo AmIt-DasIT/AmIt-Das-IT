@@ -20,7 +20,7 @@ const App: React.FC = () => {
     >
       {/* Header */}
       <motion.header
-        className="fixed top-0 w-full z-10 bg-card/80 dark:bg-card/5 backdrop-blur-sm border-b border-border"
+        className="fixed top-0 w-full z-50 bg-card/80 dark:bg-card/5 backdrop-blur-sm border-b border-border"
         variants={{ hidden: { y: -100 }, visible: { y: 0 } }}
         transition={{ type: "spring", stiffness: 260, damping: 15 }}
       >

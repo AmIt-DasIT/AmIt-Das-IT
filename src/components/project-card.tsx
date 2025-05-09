@@ -28,7 +28,7 @@ export const ProjectCard: React.FC<{ project: Project; index: number }> = ({
         <CardContent>
           <img
             src={project.image_url}
-            className="w-full h-40 bg-neutral-200 dark:bg-stone-900 rounded-md mb-4"
+            className="w-full h-40 bg-neutral-200 dark:bg-stone-900 rounded-md mb-4 border"
             alt=""
           />
           <a href={project.github_link} className="font-bold underline" target="_blank">

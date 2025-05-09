@@ -4,21 +4,21 @@ export const projects = [
     title: "SLM Data Visualizer",
     description: "http://monster-dev-test.distronix.in:3102/",
     github_link: "http://monster-dev-test.distronix.in:3102/",
-    image_url: "/git-tree.png",
+    image_url: "/slm.png",
   },
   {
     id: 2,
     title: "CAAQMS",
     description: "https://diag.caaqms.wbpcb.wtlprojects.com/",
     github_link: "https://diag.caaqms.wbpcb.wtlprojects.com/",
-    image_url: "/git-tree.png",
+    image_url: "/caaqms.png",
   },
   {
     id: 3,
     title: "WBPHED - PWMS",
     description: "https://pwms.wbphed.wtlprojects.com/",
     github_link: "https://pwms.wbphed.wtlprojects.com/",
-    image_url: "/git-tree.png",
+    image_url: "/pwms.png",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const projects = [
     title: "HTML Code Editor",
     description: "https://code-editor-next.vercel.app/login",
     github_link: "https://code-editor-next.vercel.app/login",
-    image_url: "/git-tree.png",
+    image_url: "/cssverse.png",
   },
   {
     id: 6,
@@ -46,14 +46,14 @@ export const projects = [
     title: "Free React Components",
     description: "https://web-prep.vercel.app/",
     github_link: "https://web-prep.vercel.app/",
-    image_url: "/git-tree.png",
+    image_url: "/web.png",
   },
   {
     id: 8,
     title: "EyeStop",
     description: "https://www.eyestop.in/",
     github_link: "https://www.eyestop.in/",
-    image_url: "/git-tree.png",
+    image_url: "/eyestop.png",
   },
 ];
 
