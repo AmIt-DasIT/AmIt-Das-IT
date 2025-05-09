@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { certifications } from "@/data/data";
 import { itemVariants, containerVariants } from "@/anim/animation";
-import { Award } from "lucide-react";
+import { Award, Download } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export default function Certifications() {
   return (
@@ -47,11 +48,19 @@ export default function Certifications() {
                 <DialogContent className="!max-w-3xl">
                   <DialogHeader>
                     <DialogTitle>{cert.name}</DialogTitle>
-                    <DialogDescription>
-                      <iframe
-                        src={cert.link}
-                        className="w-full min-h-[60vh]"
-                      ></iframe>
+                    <DialogDescription className="flex flex-col pt-3">
+                      <div className="hidden sm:block">
+                        <iframe
+                          src={cert.link}
+                          className="w-full min-h-[60vh]"
+                        />
+                      </div>
+                      <Button variant={"outline"} className="sm:hidden flex">
+                        <Download className="mr-2" />
+                        <a href={cert.link} download>
+                          Download
+                        </a>
+                      </Button>
                     </DialogDescription>
                   </DialogHeader>
                 </DialogContent>

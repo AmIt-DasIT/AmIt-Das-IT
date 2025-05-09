@@ -65,11 +65,11 @@ export default function AboutMe() {
         </Button>
         <Button variant="outline" className="border-border">
           <a
-            href="/resume.pdf"
+            href="/Amit Das Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center"
-            download={"resume.pdf"}
+            download={"Amit Das Resume.pdf"}
           >
             <Download className="mr-2" /> Download CV
           </a>

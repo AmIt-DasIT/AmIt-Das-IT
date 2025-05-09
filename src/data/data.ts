@@ -102,5 +102,4 @@ export const certifications = [
     year: "2025",
     link: "/frontend_developer_react certificate.pdf",
   },
-  // { name: "Google UX Design", issuer: "Google", year: "2022", link: "" },
 ];

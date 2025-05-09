@@ -9,6 +9,27 @@ export default function Contact() {
     window.location.href = "tel:+917679480267";
   };
 
+  function formAction(formData: FormData) {
+    const name = (formData.get("name") as string) || "";
+    const email = (formData.get("email") as string) || "";
+    const message = (formData.get("message") as string) || "";
+
+    // Construct the mailto link
+    const subject = `Contact Form Submission from ${name}`;
+    const body =
+      `Contact Form Submission\n\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Message:\n${message}\n\n` +
+      `Sent from My Website`;
+    const mailtoLink = `mailto:iamamitdas2008@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    // Open the email client
+    window.location.href = mailtoLink;
+  }
+
   return (
     <motion.section variants={containerVariants} className="pt-20" id="contact">
       <motion.h2
@@ -23,13 +44,14 @@ export default function Contact() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", stiffness: 100 }}
       >
-        <form className="space-y-4">
+        <form className="space-y-4" action={formAction}>
           <div>
             <label className="block text-sm font-medium mb-1 text-foreground">
               Name
             </label>
             <input
               type="text"
+              name="name"
               className="w-full p-2 rounded-md bg-background border border-input"
             />
           </div>
@@ -39,6 +61,7 @@ export default function Contact() {
             </label>
             <input
               type="email"
+              name="email"
               className="w-full p-2 rounded-md bg-background border border-input"
             />
           </div>
@@ -46,15 +69,18 @@ export default function Contact() {
             <label className="block text-sm font-medium mb-1 text-foreground">
               Message
             </label>
-            <textarea className="w-full p-2 rounded-md bg-background border border-input min-h-[100px]"></textarea>
+            <textarea
+              name="message"
+              className="w-full p-2 rounded-md bg-background border border-input min-h-[100px]"
+            ></textarea>
           </div>
-          <Button variant={"outline"} className="w-full">
+          <Button variant={"default"} className="w-full">
             <Mail className="mr-2" /> Send Message
           </Button>
         </form>
         <div className="flex gap-2 my-5 items-center">
           <Separator className="flex-1" />
-          <span className="font-semibold italic">OR</span>
+          <span className="font-semibold italic">Or</span>
           <Separator className="flex-1" />
         </div>
         <Button
