@@ -6,7 +6,7 @@ import { Github, Linkedin, Download, CircleArrowDown } from "lucide-react";
 export default function AboutMe() {
   return (
     <motion.section
-      className="container mx-auto px-4 text-center min-h-screen flex flex-col justify-center"
+      className="container mx-auto px-4 text-center min-h-screen flex flex-col justify-center my-24 sm:my-0"
       variants={containerVariants}
       id="about-me"
     >
@@ -44,7 +44,7 @@ export default function AboutMe() {
         <b className="text-primary">Node.js</b> and{" "}
         <b className="text-primary">Remix</b>, I’m all in.
       </motion.p>
-      <motion.div variants={itemVariants} className="flex justify-center gap-4">
+      <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4">
         <Button variant="outline" className="border-border">
           <a
             href="https://github.com/AmIt-DasIT"

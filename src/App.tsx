@@ -18,7 +18,7 @@ const App: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <motion.div className="hidden dark:block h-[30%] w-[30%] bg-red-900 fixed bottom-10 left-[8%] rounded-full blur-[100px] opacity-30"></motion.div>
+      <motion.div className="hidden dark:block h-[30%] w-[30%] bg-red-600 fixed bottom-10 left-[8%] rounded-full blur-[100px] opacity-30"></motion.div>
       <motion.div className="hidden dark:block h-[30%] w-[30%] bg-sky-600 fixed top-[12%] right-[8%] rounded-full blur-[100px] opacity-40"></motion.div>
       {/* Header */}
       <motion.header
