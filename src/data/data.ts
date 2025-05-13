@@ -1,25 +1,25 @@
 export const projects = [
-  {
-    id: 1,
-    title: "SLM Data Visualizer",
-    description: "http://monster-dev-test.distronix.in:3102/",
-    github_link: "http://monster-dev-test.distronix.in:3102/",
-    image_url: "/slm.png",
-  },
-  {
-    id: 2,
-    title: "CAAQMS",
-    description: "https://diag.caaqms.wbpcb.wtlprojects.com/",
-    github_link: "https://diag.caaqms.wbpcb.wtlprojects.com/",
-    image_url: "/caaqms.png",
-  },
-  {
-    id: 3,
-    title: "WBPHED - PWMS",
-    description: "https://pwms.wbphed.wtlprojects.com/",
-    github_link: "https://pwms.wbphed.wtlprojects.com/",
-    image_url: "/pwms.png",
-  },
+  // {
+  //   id: 1,
+  //   title: "SLM Data Visualizer",
+  //   description: "http://monster-dev-test.distronix.in:3102/",
+  //   github_link: "http://monster-dev-test.distronix.in:3102/",
+  //   image_url: "/slm.png",
+  // },
+  // {
+  //   id: 2,
+  //   title: "CAAQMS",
+  //   description: "https://diag.caaqms.wbpcb.wtlprojects.com/",
+  //   github_link: "https://diag.caaqms.wbpcb.wtlprojects.com/",
+  //   image_url: "/caaqms.png",
+  // },
+  // {
+  //   id: 3,
+  //   title: "WBPHED - PWMS",
+  //   description: "https://pwms.wbphed.wtlprojects.com/",
+  //   github_link: "https://pwms.wbphed.wtlprojects.com/",
+  //   image_url: "/pwms.png",
+  // },
   {
     id: 4,
     title: "Gitlab Commit Tracker",
