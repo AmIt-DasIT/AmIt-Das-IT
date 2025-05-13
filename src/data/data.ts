@@ -59,23 +59,98 @@ export const projects = [
 
 export const skills = [
   { name: "React", level: 90, icon: "/react.svg", url: "https://react.dev/" },
-  { name: "Next JS", level: 85, icon: "/nextjs.svg", url: "https://nextjs.org/" },
-  { name: "TypeScript", level: 85, icon: "/typescript.svg", url: "https://www.typescriptlang.org/" },
-  { name: "JavaScript", level: 85, icon: "/javascript.svg", url: "https://www.javascript.com/" },
-  { name: "HTML", level: 90, icon: "/html.svg", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-  { name: "CSS", level: 90, icon: "/css.svg", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-  { name: "Tailwind CSS", level: 85, icon: "/tailwind.svg", url: "https://tailwindcss.com/" },
-  { name: "Redux", level: 80, icon: "/redux.svg", url: "https://redux.js.org/" },
-  { name: "GraphQL", level: 80, icon: "/graphql.svg", url: "https://graphql.org/" },
-  { name: "PostgreSQL", level: 80, icon: "/postgresql.svg", url: "https://www.postgresql.org/" },
-  { name: "MongoDB", level: 80, icon: "/mongodb.svg", url: "https://www.mongodb.com/" },
-  { name: "Firebase", level: 80, icon: "/firebase.svg", url: "https://firebase.google.com/" },
+  {
+    name: "Next JS",
+    level: 85,
+    icon: "/nextjs.svg",
+    url: "https://nextjs.org/",
+  },
+  {
+    name: "TypeScript",
+    level: 85,
+    icon: "/typescript.svg",
+    url: "https://www.typescriptlang.org/",
+  },
+  {
+    name: "JavaScript",
+    level: 85,
+    icon: "/javascript.svg",
+    url: "https://www.javascript.com/",
+  },
+  {
+    name: "HTML",
+    level: 90,
+    icon: "/html.svg",
+    url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    name: "CSS",
+    level: 90,
+    icon: "/css.svg",
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    name: "Tailwind CSS",
+    level: 85,
+    icon: "/tailwind.svg",
+    url: "https://tailwindcss.com/",
+  },
+  {
+    name: "Redux",
+    level: 80,
+    icon: "/redux.svg",
+    url: "https://redux.js.org/",
+  },
+  {
+    name: "GraphQL",
+    level: 80,
+    icon: "/graphql.svg",
+    url: "https://graphql.org/",
+  },
+  {
+    name: "PostgreSQL",
+    level: 80,
+    icon: "/postgresql.svg",
+    url: "https://www.postgresql.org/",
+  },
+  {
+    name: "MongoDB",
+    level: 80,
+    icon: "/mongodb.svg",
+    url: "https://www.mongodb.com/",
+  },
+  {
+    name: "Firebase",
+    level: 80,
+    icon: "/firebase.svg",
+    url: "https://firebase.google.com/",
+  },
   { name: "Git", level: 80, icon: "/git.svg", url: "https://git-scm.com/" },
-  { name: "Figma", level: 80, icon: "/figma.svg", url: "https://www.figma.com/" },
-  { name: "Node JS", level: 80, icon: "/nodejs.svg", url: "https://nodejs.org/" },
-  { name: "Express JS", level: 80, icon: "/express.svg", url: "https://expressjs.com/" },
+  {
+    name: "Figma",
+    level: 80,
+    icon: "/figma.svg",
+    url: "https://www.figma.com/",
+  },
+  {
+    name: "Node JS",
+    level: 80,
+    icon: "/nodejs.svg",
+    url: "https://nodejs.org/",
+  },
+  {
+    name: "Express JS",
+    level: 80,
+    icon: "/express.svg",
+    url: "https://expressjs.com/",
+  },
   { name: "Sass", level: 80, icon: "/sass.svg", url: "https://sass-lang.com/" },
-  { name: "Docker", level: 75, icon: "/docker.svg", url: "https://www.docker.com/" },
+  {
+    name: "Docker",
+    level: 75,
+    icon: "/docker.svg",
+    url: "https://www.docker.com/",
+  },
 ];
 
 export const experience = [
@@ -102,4 +177,15 @@ export const certifications = [
     year: "2025",
     link: "/frontend_developer_react certificate.pdf",
   },
+];
+
+export const sections = [
+  "about-me",
+  "skills",
+  "projects",
+  "experience",
+  "timeline-demo",
+  "certifications",
+  "gallery",
+  "contact",
 ];

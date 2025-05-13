@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { itemVariants, containerVariants } from "@/anim/animation";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Download, CircleArrowDown } from "lucide-react";
+import { TextEffect } from "@/components/ui/text-effect";
 
 export default function AboutMe() {
   return (
@@ -18,9 +19,16 @@ export default function AboutMe() {
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
       />
 
-      <motion.h1 variants={itemVariants} className="mb-4">
+      <motion.h1 variants={itemVariants} className="mb-4 flex justify-center items-end">
         <span className="text-xl pr-2">Hi, I&apos;m</span>
-        <span className="text-5xl font-extrabold">Amit Das</span>
+        <TextEffect
+          per="char"
+          delay={1}
+          preset="blur"
+          className="text-5xl font-extrabold"
+        >
+          Amit Das
+        </TextEffect>
       </motion.h1>
       <motion.p
         variants={itemVariants}
@@ -72,7 +80,11 @@ export default function AboutMe() {
             rel="noopener noreferrer"
             className="flex items-center"
           >
-            <img src="/uiverse.webp" className="w-[60px] pt-1.5" alt="uiverse" />
+            <img
+              src="/uiverse.webp"
+              className="w-[60px] pt-1.5"
+              alt="uiverse"
+            />
           </a>
         </Button>
         <Button variant="outline" className="border-border">

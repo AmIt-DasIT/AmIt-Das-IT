@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { TimelineDemo } from "./layout/educational-experience";
-import { ModeToggle } from "./components/ThemeToggle";
 import { containerVariants, itemVariants } from "./anim/animation";
 import Skills from "./layout/skills";
 import Projects from "./layout/projects";
@@ -8,52 +7,28 @@ import Experience from "./layout/experience";
 import Certifications from "./layout/certifications";
 import AboutMe from "./layout/about-me";
 import Contact from "./layout/contact";
-import { Sidebar } from "./components/sidebar";
-import Gallery from "./layout/gallery";
+import Header from "./components/header";
 import { useEffect, useState } from "react";
-import ActiveSection from "./components/active-section";
+import { ArrowUp } from "lucide-react";
 
-const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>("about-me");
+const App = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show button when page is scrolled down
+  const toggleVisibility = () => {
+    setIsVisible(window.scrollY > 300);
+  };
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    let a = document.createElement("a");
+    a.href = "#home";
+    a.click();
+  };
 
   useEffect(() => {
-    const sections = [
-      "about-me",
-      "skills",
-      "projects",
-      "experience",
-      "timeline-demo",
-      "certifications",
-      "gallery",
-      "contact",
-    ];
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "-20% 0px -20% 0px", // Adjust to trigger when section is mostly in view
-        threshold: 0.5, // Trigger when 50% of the section is visible
-      }
-    );
-
-    sections.forEach((sectionId) => {
-      const element = document.getElementById(sectionId);
-      if (element) observer.observe(element);
-    });
-
-    return () => {
-      sections.forEach((sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) observer.unobserve(element);
-      });
-    };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   return (
@@ -62,37 +37,15 @@ const App: React.FC = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
+      id="home"
     >
-      <motion.div className="hidden dark:block h-[30%] w-[30%] bg-red-600 fixed bottom-10 left-[8%] rounded-full blur-[100px] opacity-30"></motion.div>
-      <motion.div className="hidden dark:block h-[30%] w-[30%] bg-sky-600 fixed top-[12%] right-[8%] rounded-full blur-[100px] opacity-40"></motion.div>
+      <motion.div className="hidden dark:block h-[30%] w-[30%] bg-red-600 fixed bottom-10 left-[8%] rounded-full blur-[100px] opacity-30" />
+      <motion.div className="hidden dark:block h-[30%] w-[30%] bg-sky-600 fixed top-[12%] right-[8%] rounded-full blur-[100px] opacity-40" />
+      <motion.div className="h-[60%] w-[45%] bg-red-600 fixed -bottom-[10%] left-[8%] rounded-full blur-[110px] opacity-10" />
+      <motion.div className="h-[60%] w-[45%] bg-sky-600 fixed -top-[12%] right-[8%] rounded-full blur-[110px] opacity-10" />
+
       {/* Header */}
-      <motion.header
-        className="fixed top-0 w-full z-50 bg-card/80 dark:bg-card/5 backdrop-blur-sm border-b border-border"
-        variants={{ hidden: { y: -100 }, visible: { y: 0 } }}
-        transition={{ type: "spring", stiffness: 260, damping: 15 }}
-      >
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="hidden sm:flex gap-4 items-center font-bold">
-            <ActiveSection activeSection={activeSection} id="about-me">
-              Home
-            </ActiveSection>
-            <ActiveSection activeSection={activeSection} id="skills">
-              Skills
-            </ActiveSection>
-            <ActiveSection activeSection={activeSection} id="projects">
-              Projects
-            </ActiveSection>
-            <ActiveSection activeSection={activeSection} id="experience">
-              Experience
-            </ActiveSection>
-            <ActiveSection activeSection={activeSection} id="contact">
-              Contact
-            </ActiveSection>
-          </div>
-          <Sidebar />
-          <ModeToggle />
-        </div>
-      </motion.header>
+      <Header />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
@@ -126,16 +79,27 @@ const App: React.FC = () => {
           <Certifications />
         </section>
 
-        {/* Gallery */}
-        <section id="gallery">
-          <Gallery />
-        </section>
-
         {/* Contact */}
         <section id="contact">
           <Contact />
         </section>
       </main>
+
+      <motion.button
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
+        transition={{
+          duration: 0.3,
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+        }}
+        hidden={!isVisible}
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 rounded-full bg-primary p-2.5 cursor-pointer text-white shadow-md hover:bg-primary/80 w-fit h-fit"
+      >
+        <ArrowUp className="h-5 w-5" />
+      </motion.button>
 
       {/* Footer */}
       <motion.footer
@@ -143,7 +107,7 @@ const App: React.FC = () => {
         variants={itemVariants}
       >
         <p className="text-muted-foreground">
-          © {new Date().getFullYear()} Amit Das. All rights reserved.
+          © 2025 Amit Das. All rights reserved.
         </p>
       </motion.footer>
     </motion.div>
