@@ -8,7 +8,6 @@ export default function Projects() {
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      id="projects"
       className="pt-20"
     >
       <motion.h2

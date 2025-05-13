@@ -7,7 +7,6 @@ export default function Skills() {
   return (
     <motion.section
       variants={containerVariants}
-      id="skills"
       className="sm:pt-20"
     >
       <motion.h2

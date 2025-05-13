@@ -31,7 +31,7 @@ export default function Contact() {
   }
 
   return (
-    <motion.section variants={containerVariants} className="pt-20" id="contact">
+    <motion.section variants={containerVariants} className="pt-20">
       <motion.h2
         variants={itemVariants}
         className="text-3xl font-bold text-center mb-12"

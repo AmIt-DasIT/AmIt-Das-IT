@@ -8,7 +8,6 @@ export default function AboutMe() {
     <motion.section
       className="container mx-auto px-4 text-center min-h-screen flex flex-col justify-center my-24 sm:my-0"
       variants={containerVariants}
-      id="about-me"
     >
       <motion.img
         src="/avatar.jpg"

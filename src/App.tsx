@@ -9,8 +9,53 @@ import Certifications from "./layout/certifications";
 import AboutMe from "./layout/about-me";
 import Contact from "./layout/contact";
 import { Sidebar } from "./components/sidebar";
+import Gallery from "./layout/gallery";
+import { useEffect, useState } from "react";
+import ActiveSection from "./components/active-section";
 
 const App: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<string>("about-me");
+
+  useEffect(() => {
+    const sections = [
+      "about-me",
+      "skills",
+      "projects",
+      "experience",
+      "timeline-demo",
+      "certifications",
+      "gallery",
+      "contact",
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-20% 0px -20% 0px", // Adjust to trigger when section is mostly in view
+        threshold: 0.5, // Trigger when 50% of the section is visible
+      }
+    );
+
+    sections.forEach((sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      sections.forEach((sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) observer.unobserve(element);
+      });
+    };
+  }, []);
+
   return (
     <motion.div
       className="min-h-screen bg-background text-foreground transition-colors duration-300 scroll-smooth"
@@ -28,11 +73,21 @@ const App: React.FC = () => {
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="hidden sm:flex gap-4 items-center font-bold">
-            <a href="#about-me">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+            <ActiveSection activeSection={activeSection} id="about-me">
+              Home
+            </ActiveSection>
+            <ActiveSection activeSection={activeSection} id="skills">
+              Skills
+            </ActiveSection>
+            <ActiveSection activeSection={activeSection} id="projects">
+              Projects
+            </ActiveSection>
+            <ActiveSection activeSection={activeSection} id="experience">
+              Experience
+            </ActiveSection>
+            <ActiveSection activeSection={activeSection} id="contact">
+              Contact
+            </ActiveSection>
           </div>
           <Sidebar />
           <ModeToggle />
@@ -42,28 +97,44 @@ const App: React.FC = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
         {/* About Me */}
-        <AboutMe />
+        <section id="about-me">
+          <AboutMe />
+        </section>
 
         {/* Skills */}
-        <Skills />
+        <section id="skills">
+          <Skills />
+        </section>
 
         {/* Projects */}
-        <Projects />
+        <section id="projects">
+          <Projects />
+        </section>
 
         {/* Work Experience */}
-        <Experience />
+        <section id="experience">
+          <Experience />
+        </section>
 
         {/* Educational Experience */}
-        <TimelineDemo />
+        <section id="timeline-demo">
+          <TimelineDemo />
+        </section>
 
         {/* Certifications */}
-        <Certifications />
+        <section id="certifications">
+          <Certifications />
+        </section>
 
         {/* Gallery */}
-        {/* <Gallery /> */}
+        <section id="gallery">
+          <Gallery />
+        </section>
 
         {/* Contact */}
-        <Contact />
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
 
       {/* Footer */}
