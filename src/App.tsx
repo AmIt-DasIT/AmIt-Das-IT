@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { TimelineDemo } from "./layout/educational-experience";
 import { containerVariants, itemVariants } from "./anim/animation";
 import Skills from "./layout/skills";
@@ -10,6 +10,7 @@ import Contact from "./layout/contact";
 import Header from "./components/header";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
+import { Analytics } from "@vercel/analytics/next";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -46,6 +47,7 @@ const App = () => {
 
       {/* Header */}
       <Header />
+      <Analytics />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
@@ -85,21 +87,26 @@ const App = () => {
         </section>
       </main>
 
-      <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
-        transition={{
-          duration: 0.3,
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-        hidden={!isVisible}
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 rounded-full bg-primary p-2.5 cursor-pointer text-white shadow-md hover:bg-primary/80 w-fit h-fit"
-      >
-        <ArrowUp className="h-5 w-5" />
-      </motion.button>
+      <AnimatePresence>
+        {isVisible && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            transition={{
+              duration: 0.3,
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 p-3 cursor-pointer text-white shadow-lg hover:shadow-xl hover:bg-gradient-to-r hover:from-indigo-700 hover:to-purple-700 "
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="h-6 w-6" />
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       {/* Footer */}
       <motion.footer
