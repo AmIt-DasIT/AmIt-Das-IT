@@ -19,7 +19,10 @@ export default function AboutMe() {
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
       />
 
-      <motion.h1 variants={itemVariants} className="mb-4 flex justify-center items-end">
+      <motion.h1
+        variants={itemVariants}
+        className="mb-4 flex justify-center items-end"
+      >
         <span className="text-xl pr-2">Hi, I&apos;m</span>
         <TextEffect
           per="char"
@@ -53,7 +56,7 @@ export default function AboutMe() {
       </motion.p>
       <motion.div
         variants={itemVariants}
-        className="flex flex-wrap justify-center gap-4"
+        className="flex flex-wrap justify-center gap-4 z-50"
       >
         <Button variant="outline" className="border-border">
           <a
@@ -64,7 +67,7 @@ export default function AboutMe() {
             <Github className="mr-2" /> GitHub
           </a>
         </Button>
-        <Button variant="outline" className="border-border">
+        <Button variant="outline" className="border-border cursor-pointer">
           <a
             href="https://www.linkedin.com/in/amitdasit/"
             target="_blank"

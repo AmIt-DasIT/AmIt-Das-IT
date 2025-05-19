@@ -155,11 +155,11 @@ export const skills = [
 
 export const experience = [
   {
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     company: "Distronix",
     period: "2022-Present",
     description:
-      " Built responsive web applications and UI development for multiple client projects.",
+      "Built responsive web applications and UI development for multiple client projects almost 3+ years of experience.",
   },
   {
     role: "Frontend Developer",

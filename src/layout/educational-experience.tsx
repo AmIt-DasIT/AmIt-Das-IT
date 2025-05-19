@@ -12,7 +12,7 @@ export function TimelineDemo() {
             <b>University Of Calcutta</b>.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-lg font-normal mb-8">
-            CGPA : <b>8.5</b>
+            CGPA : <b>8.1</b>
           </p>
         </div>
       ),
