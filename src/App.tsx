@@ -10,7 +10,6 @@ import Contact from "./layout/contact";
 import Header from "./components/header";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
-import { Analytics } from "@vercel/analytics/next";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,7 +46,6 @@ const App = () => {
 
       {/* Header */}
       <Header />
-      <Analytics />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
