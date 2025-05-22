@@ -10,7 +10,7 @@ import Contact from "./layout/contact";
 import Header from "./components/header";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
-import Gallery from "./layout/gallery";
+// import Gallery from "./layout/gallery";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
