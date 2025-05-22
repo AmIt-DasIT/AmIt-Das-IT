@@ -80,9 +80,9 @@ const App = () => {
           <Certifications />
         </section>
 
-        <section id="gallery">
+        {/* <section id="gallery">
           <Gallery />
-        </section>
+        </section> */}
 
         {/* Contact */}
         <section id="contact">
