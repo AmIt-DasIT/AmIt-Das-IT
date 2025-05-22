@@ -10,6 +10,7 @@ import Contact from "./layout/contact";
 import Header from "./components/header";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
+import Gallery from "./layout/gallery";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,6 +78,10 @@ const App = () => {
         {/* Certifications */}
         <section id="certifications">
           <Certifications />
+        </section>
+
+        <section id="gallery">
+          <Gallery />
         </section>
 
         {/* Contact */}
