@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/anim/animation";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 export default function Contact() {
@@ -34,64 +34,82 @@ export default function Contact() {
     <motion.section variants={containerVariants} className="pt-20">
       <motion.h2
         variants={itemVariants}
-        className="text-3xl font-bold text-center mb-12"
+        className="text-2xl font-medium mb-4 flex items-center"
       >
-        Get in Touch
+        <Send className="mr-2" /> Contact
       </motion.h2>
-      <motion.div
-        className="max-w-md mx-auto p-6 bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border rounded-lg shadow-lg"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ type: "spring", stiffness: 100 }}
-      >
-        <form className="space-y-4" action={formAction}>
-          <div>
-            <label className="block text-sm font-medium mb-1 text-foreground">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              className="w-full p-2 rounded-md bg-background border border-input"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1 text-foreground">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              className="w-full p-2 rounded-md bg-background border border-input"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1 text-foreground">
-              Message
-            </label>
-            <textarea
-              name="message"
-              className="w-full p-2 rounded-md bg-background border border-input min-h-[100px]"
-            ></textarea>
-          </div>
-          <Button variant={"default"} className="w-full">
-            <Mail /> Send Message
-          </Button>
-        </form>
-        <div className="flex gap-2 my-5 items-center">
-          <Separator className="flex-1" />
-          <span className="font-semibold italic">Or</span>
-          <Separator className="flex-1" />
+      <div className="flex gap-8">
+        <div className="flex flex-col flex-1/2 gap-4">
+          <button className="p-2.5 rounded-lg flex gap-2 items-center px-4 bg-card">
+            <Phone className="mr-2 text-primary" />
+            <div className="flex flex-col text-left">
+              <span>Contact No</span>
+              <span>+91 7679480267</span>
+            </div>
+          </button>
+          <button className="p-2.5 rounded-lg flex gap-2 items-center px-4 bg-card">
+            <Mail className="mr-2 text-primary" />
+            <div className="flex flex-col text-left">
+              <span>Email</span>
+              <span>iamamitdas2008@gmail</span>
+            </div>
+          </button>
         </div>
-        <Button
-          onClick={handleCallClick}
-          variant={"outline"}
-          className="w-full mt-2"
+        <motion.div
+          className="p-6 border rounded-xl flex-1/2"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", stiffness: 100 }}
         >
-          <Phone />
-          Call Me
-        </Button>
-      </motion.div>
+          <form className="space-y-4" action={formAction}>
+            <div>
+              <label className="block text-sm font-medium mb-1 text-foreground">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                className="w-full p-2 rounded-md bg-background border outline-none"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-1 text-foreground">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                className="w-full p-2 rounded-md bg-background border outline-none"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-1 text-foreground">
+                Message
+              </label>
+              <textarea
+                name="message"
+                className="w-full p-2 rounded-md bg-background border outline-none min-h-[100px]"
+              ></textarea>
+            </div>
+            <Button variant={"default"} className="w-full">
+              <Mail /> Send Message
+            </Button>
+          </form>
+          <div className="flex gap-2 my-5 items-center">
+            <Separator className="flex-1" />
+            <span className="font-semibold italic">Or</span>
+            <Separator className="flex-1" />
+          </div>
+          <Button
+            onClick={handleCallClick}
+            variant={"outline"}
+            className="w-full mt-2"
+          >
+            <Phone />
+            Call Me
+          </Button>
+        </motion.div>
+      </div>
     </motion.section>
   );
 }

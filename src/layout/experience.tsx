@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
 import { experience } from "@/data/data";
 import { itemVariants, containerVariants } from "@/anim/animation";
-import { Briefcase } from "lucide-react";
+import { Briefcase, LucideBriefcaseBusiness } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Experience() {
   return (
     <div className="pt-20">
-      <motion.section className="container mx-auto px-4 py-16 relative border-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 lg:border-l dark:[--pattern-fg:var(--color-white)]/10" variants={containerVariants}>
+      <motion.section className="" variants={containerVariants}>
         <motion.h2
           variants={itemVariants}
-          className="text-3xl font-bold text-center mb-12"
+          className="text-2xl font-medium mb-4 flex items-center gap-2"
         >
-          Work Experience
+          <LucideBriefcaseBusiness /> Work Experience
         </motion.h2>
-        <div className="max-w-2xl mx-auto space-y-6">
+        <div className=" space-y-6">
           {experience.map((exp, index) => (
             <motion.div
               key={index}
@@ -23,13 +24,20 @@ export default function Experience() {
               transition={{ delay: index * 0.2 }}
               whileHover={{ scale: 1.02 }}
             >
-              <h3 className="text-xl font-semibold flex items-center">
-                <Briefcase className="mr-2" /> {exp.role}
-              </h3>
-              <p className="text-muted-foreground">
-                {exp.company} | {exp.period}
-              </p>
-              <p className="text-muted-foreground">{exp.description}</p>
+              <div className="flex justify-between pb-2">
+                <h3 className="text-xl font-semibold flex items-center">
+                  <Briefcase className="mr-2" />
+                  <div>
+                    {exp.role}
+                    <p className="text-muted-foreground text-base">
+                      {exp.company}
+                    </p>
+                  </div>
+                </h3>
+                <Button variant={"outline"}>{exp.period}</Button>
+              </div>
+              <hr />
+              <p className="text-muted-foreground pt-2">{exp.description}</p>
             </motion.div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { certifications } from "@/data/data";
 import { itemVariants, containerVariants } from "@/anim/animation";
-import { Award, Download } from "lucide-react";
+import { Award, Download, Trophy } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -14,17 +14,14 @@ import { Button } from "@/components/ui/button";
 
 export default function Certifications() {
   return (
-    <motion.section
-      className="container mx-auto px-4 py-16 relative border-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 max-lg:border-t lg:border-l dark:[--pattern-fg:var(--color-white)]/10"
-      variants={containerVariants}
-    >
+    <motion.section className="pt-20" variants={containerVariants}>
       <motion.h2
         variants={itemVariants}
-        className="text-3xl font-bold text-center mb-12"
+        className="text-2xl font-medium mb-4 flex items-center"
       >
-        Certifications
+        <Trophy className="mr-2" /> Certifications
       </motion.h2>
-      <div className="max-w-2xl mx-auto space-y-6">
+      <div className="">
         {certifications.map((cert, index) => (
           <motion.div
             key={index}

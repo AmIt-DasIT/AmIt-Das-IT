@@ -5,17 +5,14 @@ import { motion } from "framer-motion";
 
 export default function Skills() {
   return (
-    <motion.section
-      variants={containerVariants}
-      className="sm:pt-20"
-    >
+    <motion.section variants={containerVariants} className="sm:pt-20">
       <motion.h2
         variants={itemVariants}
-        className="text-3xl font-bold text-center mb-12"
+        className="text-2xl font-medium mb-4 flex items-center"
       >
         Skills
       </motion.h2>
-      <div className="max-w-4xl mx-auto flex gap-2 flex-wrap justify-center">
+      <div className="flex gap-2 flex-wrap">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
@@ -31,7 +28,7 @@ export default function Skills() {
             </div>
             {/* <div className="w-full bg-muted rounded-full h-2.5 text-center">
               <motion.div
-                className="bg-primary h-2.5 rounded-full text-[8px] font-bold"
+                className="bg-primary h-1 rounded-full text-[8px] font-bold"
                 initial={{ width: 0 }}
                 animate={{ width: `${skill.level}%` }}
                 transition={{ delay: index * 0.2 + 0.2, duration: 0.8 }}

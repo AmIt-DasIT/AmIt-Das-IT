@@ -41,13 +41,13 @@
 .dark {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
+  --card: oklch(0.173 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.546 0.245 262.881);
+  --primary: oklch(0.824 0.1945 155.27);
   --primary-foreground: oklch(0.379 0.146 265.522);
-  --secondary: oklch(0.274 0.006 286.033);
+  --secondary: oklch(0.2393 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
@@ -71,7 +71,6 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.488 0.243 264.376);
 }
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -112,16 +111,17 @@
 }
 
 :root {
-  font-family: "Nunito", sans-serif;
-  font-weight: 550;
+  font-family: "Space Grotesk", sans-serif;
   scroll-behavior: smooth;
+  padding: 0%;
+  margin: 0%;
 }
 
 /* For scrollbar css */
-
+/* 
 ::-webkit-scrollbar {
-  width: 2px !important;
-  height: 2px !important;
+  width: 8px !important;
+  height: 8px !important;
 }
 
 ::-webkit-scrollbar-track {
@@ -130,7 +130,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: #696969;
-  width: 2px;
+  width: 12px;
   border-radius: 10px;
 }
 
@@ -146,7 +146,7 @@
 
 .scroller::-webkit-scrollbar-thumb {
   border-radius: 10px;
-}
+} */
 
 @layer base {
   * {

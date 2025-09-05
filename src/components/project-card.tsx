@@ -21,7 +21,7 @@ export const ProjectCard: React.FC<{ project: Project; index: number }> = ({
 }) => {
   return (
     <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}>
-      <Card className="bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border mt-5">
+      <Card className="bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border h-[330px]">
         <CardHeader>
           <CardTitle className="font-extrabold">{project.title}</CardTitle>
           <CardDescription>{project.description}</CardDescription>
