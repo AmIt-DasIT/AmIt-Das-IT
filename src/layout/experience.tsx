@@ -34,7 +34,7 @@ export default function Experience() {
                     </p>
                   </div>
                 </h3>
-                <Button variant={"outline"}>{exp.period}</Button>
+                <Button variant={"secondary"} >{exp.period}</Button>
               </div>
               <hr />
               <p className="text-muted-foreground pt-2">{exp.description}</p>

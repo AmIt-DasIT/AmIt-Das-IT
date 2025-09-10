@@ -1,28 +1,22 @@
 import { motion } from "framer-motion";
-import { itemVariants, containerVariants } from "@/anim/animation";
+import { itemVariants, contentVariants } from "@/anim/animation";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Download, Globe } from "lucide-react";
-import { TextEffect } from "@/components/ui/text-effect";
 
 export default function AboutMe() {
   return (
     <motion.section
       className="flex flex-col sm:mt-[100px] mt-4"
-      variants={containerVariants}
+      variants={contentVariants}
+      initial="hidden"
+      animate="visible"
     >
       <p className="text-3xl mb-2">
         👋 <span className="text-base">Hi,</span>
       </p>
       <motion.h1 variants={itemVariants} className="mb-4 flex items-end">
         <span className="text-xl pr-2">I&apos;m</span>
-        <TextEffect
-          per="char"
-          delay={1}
-          preset="blur"
-          className="text-5xl font-extrabold"
-        >
-          Amit Das
-        </TextEffect>
+        <p className="text-5xl font-extrabold">Amit Das</p>
       </motion.h1>
       <motion.p
         variants={itemVariants}
