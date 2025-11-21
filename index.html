@@ -2,16 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Basic SEO -->
+    <title>Amit Das | Frontend Developer (React, Next.js, React Native)</title>
+    <meta
+      name="description"
+      content="Amit Das — Frontend Developer skilled in React, Next.js, Remix, React Native, Tailwind CSS, and modern web technologies. Passionate about building scalable, fast, and user-friendly interfaces."
+    />
+    <meta
+      name="keywords"
+      content="Amit Das, Frontend Developer, React Developer, Next.js, React Native, Tailwind CSS, Remix, JavaScript, TypeScript, UI Developer"
+    />
+    <meta name="author" content="Amit Das" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Mobile Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="Amit Das | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Frontend Developer specializing in React, Next.js, React Native, Tailwind CSS, and modern UI engineering."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://amit-das.vercel.app/og-image.png" />
+    <meta property="og:url" content="https://amit-das.vercel.app/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Amit Das | Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="Building fast, scalable, and modern user interfaces using React, Next.js, and React Native."
+    />
+    <meta name="twitter:image" content="https://amit-das.vercel.app/og-image.png" />
+
+    <!-- Structured Data (JSON-LD Schema for Personal Portfolio) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Amit Das",
+        "jobTitle": "Frontend Developer",
+        "url": "https://amit-das.vercel.app",
+        "sameAs": [
+          "https://www.linkedin.com/in/amitdas", 
+          "https://github.com/amitdas"
+        ],
+        "skills": [
+          "React",
+          "Next.js",
+          "Remix",
+          "React Native",
+          "Tailwind CSS",
+          "JavaScript",
+          "TypeScript",
+          "Frontend Development"
+        ]
+      }
+    </script>
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Hi, I&apos;m Amit Das</title>
+
+    <!-- Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
