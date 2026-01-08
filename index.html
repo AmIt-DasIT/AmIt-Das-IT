@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Charset -->
     <meta charset="UTF-8" />
 
-    <!-- Basic SEO -->
+    <!-- Title -->
     <title>Amit Das | Frontend Developer (React, Next.js, React Native)</title>
+
+    <!-- Primary SEO -->
     <meta
       name="description"
-      content="Amit Das — Frontend Developer skilled in React, Next.js, Remix, React Native, Tailwind CSS, and modern web technologies. Passionate about building scalable, fast, and user-friendly interfaces."
+      content="Amit Das is a Frontend Developer from India specializing in React, Next.js, Remix, React Native, Tailwind CSS, and modern web technologies. Official portfolio website."
     />
-    <meta
-      name="keywords"
-      content="Amit Das, Frontend Developer, React Developer, Next.js, React Native, Tailwind CSS, Remix, JavaScript, TypeScript, UI Developer"
-    />
-    <meta name="author" content="Amit Das" />
     <meta name="robots" content="index, follow" />
-    <meta name="description" content="Amit Das — Frontend Developer skilled in React, Next.js, Remix, React Native, Tailwind CSS, and modern web technologies. Passionate about building scalable, fast, and user-friendly interfaces." />
-    <meta name="keywords" content="Amit Das, Frontend Developer, React Developer, Next.js, React Native, Tailwind CSS, Remix, JavaScript, TypeScript, UI Developer" />
     <meta name="author" content="Amit Das" />
-    <meta name="robots" content="index, follow" />
 
-    <!-- Mobile Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Open Graph / Social Preview -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://amit-das.vercel.app/" />
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Amit Das | Frontend Developer" />
     <meta
       property="og:description"
-      content="Frontend Developer specializing in React, Next.js, React Native, Tailwind CSS, and modern UI engineering."
+      content="Official portfolio of Amit Das, Frontend Developer specializing in React, Next.js, and React Native."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://amit-das.vercel.app/og-image.png" />
     <meta property="og:url" content="https://amit-das.vercel.app/" />
-    <meta property="og:title" content="Amit Das | Frontend Developer" />
-    <meta property="og:description" content="Frontend Developer specializing in React, Next.js, React Native, Tailwind CSS, and modern UI engineering." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://amit-das.vercel.app/og-image.png" />
-    <meta property="og:url" content="https://amit-das.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://amit-das.vercel.app/og-image.png"
+    />
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Amit Das | Frontend Developer" />
@@ -45,39 +41,28 @@
       name="twitter:description"
       content="Building fast, scalable, and modern user interfaces using React, Next.js, and React Native."
     />
-    <meta name="twitter:image" content="https://amit-das.vercel.app/og-image.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Amit Das | Frontend Developer" />
-    <meta name="twitter:description" content="Building fast, scalable, and modern user interfaces using React, Next.js, and React Native." />
-    <meta name="twitter:image" content="https://amit-das.vercel.app/og-image.png" />
+    <meta
+      name="twitter:image"
+      content="https://amit-das.vercel.app/og-image.png"
+    />
 
-    <!-- Structured Data (JSON-LD Schema for Personal Portfolio) -->
+    <!-- Structured Data (Person Schema) -->
     <script type="application/ld+json">
       {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "Person",
         "name": "Amit Das",
-        "jobTitle": "Frontend Developer",
         "url": "https://amit-das.vercel.app",
+        "jobTitle": "Frontend Developer",
+        "description": "Frontend Developer specializing in React, Next.js, Remix, and React Native.",
         "sameAs": [
-          "https://www.linkedin.com/in/amitdas", 
+          "https://www.linkedin.com/in/amitdas",
           "https://github.com/amitdas"
-        ],
-        "skills": [
-          "React",
-          "Next.js",
-          "Remix",
-          "React Native",
-          "Tailwind CSS",
-          "JavaScript",
-          "TypeScript",
-          "Frontend Development"
         ]
       }
     </script>
 
     <!-- Icons -->
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
     <!-- Fonts -->
@@ -87,19 +72,24 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
 
     <!-- Performance -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   </head>
 
   <body>
+    <!-- SEO fallback content (important for Google) -->
+    <noscript>
+      <h1>Amit Das</h1>
+      <p>
+        Amit Das is a Frontend Developer from India specializing in React,
+        Next.js, and React Native.
+      </p>
+    </noscript>
+
     <div id="root"></div>
+
+    <!-- App -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
