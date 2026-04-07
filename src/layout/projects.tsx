@@ -7,9 +7,10 @@ import { Rocket } from "lucide-react";
 export default function Projects() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 28 }}
       animate={{ opacity: 1, y: 0 }}
-      className="pt-20"
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="pt-12 sm:pt-20"
     >
       <motion.h2
         variants={itemVariants}

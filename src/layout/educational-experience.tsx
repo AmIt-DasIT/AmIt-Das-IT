@@ -47,7 +47,7 @@ export function TimelineDemo() {
     },
   ];
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="w-full py-12 sm:py-16">
       <Timeline data={data} />
     </div>
   );

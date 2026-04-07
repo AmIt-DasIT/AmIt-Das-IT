@@ -11,22 +11,27 @@ export default function AboutMe() {
       initial="hidden"
       animate="visible"
     >
-      <p className="text-3xl mb-2">
-        👋 <span className="text-base">Hi,</span>
+      <p className="text-2xl sm:text-3xl mb-2">
+        👋 <span className="text-sm sm:text-base">Hi,</span>
       </p>
-      <motion.h1 variants={itemVariants} className="mb-4 flex items-end">
-        <span className="text-xl pr-2">I&apos;m</span>
-        <p className="text-5xl font-extrabold">Amit Das</p>
+      <motion.h1
+        variants={itemVariants}
+        className="mb-4 flex flex-wrap items-end gap-x-2 gap-y-1"
+      >
+        <span className="text-lg sm:text-xl pr-0 sm:pr-2">I&apos;m</span>
+        <span className="text-4xl sm:text-5xl font-extrabold leading-tight">
+          Amit Das
+        </span>
       </motion.h1>
       <motion.p
         variants={itemVariants}
-        className="text-xl mb-6 text-muted-foreground font-medium"
+        className="text-lg sm:text-xl mb-6 text-muted-foreground font-medium"
       >
         Full Stack Developer | UI/UX Enthusiast
       </motion.p>
       <motion.p
         variants={itemVariants}
-        className="text-xl mb-6 text-muted-foreground max-w-3xl"
+        className="text-base sm:text-xl mb-6 text-muted-foreground max-w-3xl"
       >
         Passionate software developer with nearly three years of experience
         crafting responsive, high- performance web and mobile applications using

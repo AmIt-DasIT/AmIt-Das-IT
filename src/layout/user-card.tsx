@@ -10,7 +10,7 @@ export default function UserCard() {
       variants={cardVariants}
       initial="hidden"
       animate="visible"
-      className="p-5 flex flex-col items-center border rounded-[30px] bg-card sticky top-[60px] min-w-[360px] h-fit"
+      className="p-5 hidden sm:flex flex-col items-center border rounded-[30px] bg-card sticky top-[60px] min-w-[360px] h-fit"
     >
       <div className="border border-neutral-700 rounded-[24px] aspect-square h-[320px] mb-6 relative">
         <img

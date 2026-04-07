@@ -12,10 +12,10 @@ const App = () => {
   return (
     <>
       <ReactLenis root />
-      <main className="flex justify-center w-full items-center bg-black">
-        <div className="flex gap-[70px] max-w-[1440px] px-[40px] py-[60px]">
+      <main className="flex justify-center w-full min-h-screen items-start bg-black">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[70px] max-w-[1440px] w-full px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-12 lg:py-[60px]">
           <UserCard />
-          <div>
+          <div className="w-full min-w-0 flex-1 pt-6 sm:pt-0">
             <AboutMe />
             <Experience />
             <Skills />

@@ -41,10 +41,15 @@ export default function Header() {
     <motion.header
       className="fixed top-0 w-full z-50 bg-card/80 dark:bg-card/5 backdrop-blur-sm border-b border-border"
       variants={{ hidden: { y: -100 }, visible: { y: 0 } }}
-      transition={{ type: "spring", stiffness: 260, damping: 15 }}
+      transition={{
+        type: "spring",
+        stiffness: 120,
+        damping: 28,
+        mass: 0.9,
+      }}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="hidden sm:flex gap-4 items-center font-bold">
+      <div className="container mx-auto px-4 py-3 sm:py-4 flex justify-between items-center gap-3">
+        <div className="hidden lg:flex gap-4 items-center font-bold">
           <ActiveSection activeSection={activeSection} id="about-me">
             Home
           </ActiveSection>

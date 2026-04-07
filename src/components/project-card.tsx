@@ -20,8 +20,12 @@ export const ProjectCard: React.FC<{ project: Project; index: number }> = ({
   project,
 }) => {
   return (
-    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}>
-      <Card className="bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border h-[330px]">
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <Card className="bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border min-h-[280px] h-auto md:h-[330px] flex flex-col">
         <CardHeader>
           <CardTitle className="font-extrabold">{project.title}</CardTitle>
           <CardDescription>{project.description}</CardDescription>

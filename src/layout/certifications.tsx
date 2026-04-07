@@ -25,13 +25,17 @@ export default function Certifications() {
         {certifications.map((cert, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border rounded-lg shadow-md flex items-center relative"
-            initial={{ opacity: 0, x: -50 }}
+            className="p-4 sm:p-6 bg-card/80 dark:bg-card/5 backdrop-blur-sm border border-border rounded-lg shadow-md flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-0 relative pr-16 sm:pr-24"
+            initial={{ opacity: 0, x: -24 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.2 }}
+            transition={{
+              delay: index * 0.12,
+              duration: 0.55,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             whileHover={{ scale: 1.02 }}
           >
-            <Award className="mr-4" />
+            <Award className="shrink-0 sm:mr-4" />
             <div className="">
               <h3 className="text-xl font-semibold">{cert.name}</h3>
               <p className="text-muted-foreground">

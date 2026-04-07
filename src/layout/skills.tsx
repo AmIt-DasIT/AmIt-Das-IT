@@ -16,9 +16,13 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            initial={{ translateY: 100, opacity: 0 }}
+            initial={{ translateY: 36, opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
-            transition={{ delay: index * 0.1, duration: 0.4 }}
+            transition={{
+              delay: index * 0.08,
+              duration: 0.5,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <div className="flex justify-between mb-1 gap-2 border p-2 px-3 rounded-full bg-card shadow-md">
               <LinkPreview url={skill.url} className="font-bold flex gap-2">

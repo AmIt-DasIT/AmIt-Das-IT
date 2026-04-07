@@ -38,8 +38,8 @@ export default function Contact() {
       >
         <Send className="mr-2" /> Contact
       </motion.h2>
-      <div className="flex gap-8">
-        <div className="flex flex-col flex-1/2 gap-4">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+        <div className="flex flex-col w-full lg:flex-1 gap-4">
           <button className="p-2.5 rounded-lg flex gap-2 items-center px-4 bg-card">
             <Phone className="mr-2 text-primary" />
             <div className="flex flex-col text-left">
@@ -56,10 +56,13 @@ export default function Contact() {
           </button>
         </div>
         <motion.div
-          className="p-6 border rounded-xl flex-1/2"
-          initial={{ opacity: 0, scale: 0.9 }}
+          className="p-4 sm:p-6 border rounded-xl w-full lg:flex-1"
+          initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 100 }}
+          transition={{
+            duration: 0.55,
+            ease: [0.22, 1, 0.36, 1],
+          }}
         >
           <form className="space-y-4" action={formAction}>
             <div>

@@ -7,7 +7,7 @@ export function MenuBar() {
   const [open, setOpen] = useState(false);
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger asChild className="block md:hidden">
+      <DrawerTrigger asChild className="block lg:hidden">
         <Button variant="outline">
           <Menu />
         </Button>

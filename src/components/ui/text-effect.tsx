@@ -229,7 +229,7 @@ export function TextEffect({
 
   const stagger = defaultStaggerTimes[per] / speedReveal;
 
-  const baseDuration = 0.3 / speedSegment;
+  const baseDuration = 0.42 / speedSegment;
 
   const customStagger = hasTransition(variants?.container?.visible ?? {})
     ? (variants?.container?.visible as TargetAndTransition).transition
@@ -256,6 +256,7 @@ export function TextEffect({
     ),
     item: createVariantsWithTransition(variants?.item || baseVariants.item, {
       duration: baseDuration,
+      ease: [0.22, 1, 0.36, 1],
       ...segmentTransition,
     }),
   };
