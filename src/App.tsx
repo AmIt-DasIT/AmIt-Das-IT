@@ -1,38 +1,46 @@
-import { TimelineDemo } from "./layout/educational-experience";
-import Skills from "./layout/skills";
-import Projects from "./layout/projects";
-import Experience from "./layout/experience";
-import Certifications from "./layout/certifications";
-import AboutMe from "./layout/about-me";
-import Contact from "./layout/contact";
-import UserCard from "./layout/user-card";
-import { ReactLenis } from "lenis/react";
+import { useTheme } from './hooks'
 
-const App = () => {
+import SmoothScroll from './components/system/SmoothScroll'
+import ScrollProgress from './components/system/ScrollProgress'
+import Nav from './components/system/Nav'
+
+import Hero from './components/sections/Hero'
+import Work from './components/sections/Work'
+import About from './components/sections/About'
+import Experience from './components/sections/Experience'
+import Skills from './components/sections/Skills'
+// import Play from './components/sections/Play'
+import Contact from './components/sections/Contact'
+import Footer from './components/sections/Footer'
+
+export default function App() {
+  const { theme, toggle } = useTheme()
+
   return (
-    <>
-      <ReactLenis root />
-      <main className="flex justify-center w-full min-h-screen items-start bg-black">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[70px] max-w-[1440px] w-full px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-12 lg:py-[60px]">
-          <UserCard />
-          <div className="w-full min-w-0 flex-1 pt-6 sm:pt-0">
-            <AboutMe />
-            <Experience />
-            <Skills />
-            <Projects />
-            <TimelineDemo />
-            <Certifications />
-            <Contact />
-          </div>
-        </div>
-      </main>
-      <footer className="px-4 py-6 text-center">
-        <p className="text-muted-foreground">
-          © 2025 Amit Das. All rights reserved.
-        </p>
-      </footer>
-    </>
-  );
-};
+    <div className="grain relative min-h-screen">
+      <a
+        href="#work"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-400 focus:rounded-lg focus:bg-heading focus:px-4 focus:py-2.5 focus:text-sm focus:text-ink"
+      >
+        Skip to content
+      </a>
 
-export default App;
+      <SmoothScroll />
+      <ScrollProgress />
+
+      <Nav theme={theme} onToggleTheme={toggle} />
+
+      <main>
+        <Hero />
+        <Work />
+        <About />
+        <Experience />
+        <Skills />
+        {/* <Play /> */}
+        <Contact />
+      </main>
+
+      <Footer />
+    </div>
+  )
+}
